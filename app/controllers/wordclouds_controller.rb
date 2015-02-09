@@ -1,7 +1,7 @@
 class WordcloudsController < ApplicationController
   def index
-    @wordclouds = Wordcloud.all
     @result = Wordcloud.cloud(params[:input])
+  #   @result = "http://www.craigslist.org"
   end
 
   def show

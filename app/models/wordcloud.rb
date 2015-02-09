@@ -12,9 +12,9 @@ def self.cloud(input)
     },
     parameters:{
       "config" => "n/a",
-      "height" => 600,
+      "height" => 400,
       "textblock" => "#{input}",
-      "width" => 900
+      "width" => 600
     }
 
     response.body["url"]
