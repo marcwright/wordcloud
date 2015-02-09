@@ -1,0 +1,13 @@
+<h1>Wordclouds#index</h1>
+<p>Find me in app/views/wordclouds/index.html.erb</p>
+
+
+<%= form_tag wordclouds_path, :method => 'get' do %>
+    <%= text_field_tag :input, params[:input] %>
+    <%= submit_tag "Get Wordcloud", :name => nil %>
+<% end %>
+<br>
+
+
+<iframe style="width:900px;height:600px" src="<%= @result %>"></iframe>
+
