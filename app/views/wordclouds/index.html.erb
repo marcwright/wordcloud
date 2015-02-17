@@ -11,6 +11,11 @@
               <%= text_field_tag :input, params[:input], :style => "width: 300px; height: 25px;" %>
               <%= submit_tag "Get Clouded", :name => nil, :class => "btn btn-primary" %>
           <% end %>
+
+          <%= form_tag wordclouds_path, :method => 'get' do %>
+              <%= text_field_tag :input, params[:tweet], :style => "width: 300px; height: 25px;" %>
+              <%= submit_tag "Tweet Clouded", :name => nil, :class => "btn btn-primary" %>
+          <% end %>
           <br>
         </div>
     </div>

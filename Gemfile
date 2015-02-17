@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-
+gem 'oauth'
+gem 'json'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'twitter-bootstrap-rails'
 gem 'autoprefixer-rails'
