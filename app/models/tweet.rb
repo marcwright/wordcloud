@@ -79,13 +79,22 @@ class Tweet < ActiveRecord::Base
     # Parse and print the Tweet if the response code was 200
     tweets = nil
     if response.code == '200' then
+      tweets_all = []
       tweets = JSON.parse(response.body)
       # print_timeline(tweets)
       tweets.each do |tweet|
-      puts tweet["text"]
+      tweets_all << tweet["text"].split(' ').reject {|word| word.length > 10}
+
+      # .reject {|word| word.length != 3}
+
+      # tweets = tweets_all.split(" ").delete
+
+      # tweets[0]["text"]
     end
-    nil
-    puts response.code
+    
+    tweets_all
+    # nil
+    # puts response.code
   end
   end
 end

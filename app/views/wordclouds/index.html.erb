@@ -9,13 +9,9 @@
         <div style="text-align:center;">
           <%= form_tag wordclouds_path, :method => 'get' do %>
               <%= text_field_tag :input, params[:input], :style => "width: 300px; height: 25px;" %>
-              <%= submit_tag "Get Clouded", :name => nil, :class => "btn btn-primary" %>
+              <%= submit_tag "Wordcloud Tweets", :name => nil, :class => "btn btn-primary" %>
           <% end %>
 
-          <%= form_tag wordclouds_path, :method => 'get' do %>
-              <%= text_field_tag :input, params[:tweet], :style => "width: 300px; height: 25px;" %>
-              <%= submit_tag "Tweet Clouded", :name => nil, :class => "btn btn-primary" %>
-          <% end %>
           <br>
         </div>
     </div>
@@ -24,13 +20,11 @@
 
 <div class="row">
   <div class="col-lg-2 col-md-2"></div>
-    <div class="col-lg-8 col-md-8">
-      <iframe style="width:755px;height:455px" src="<%= @result %>"></iframe>
-    </div>
+  <div class="col-lg-8 col-md-8">
+    <iframe style="width:755px;height:455px" src="<%= @result %>"></iframe>
+  </div>
   <div class="col-lg-2 col-md-2"></div>
-</div>
-
-     
+</div> 
 
     
 
