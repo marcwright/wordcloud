@@ -83,10 +83,12 @@ class Tweet < ActiveRecord::Base
       tweets = JSON.parse(response.body)
       # print_timeline(tweets)
       tweets.each do |tweet|
-      tweets_all << tweet["text"].split(' ').reject {|word| word.length > 10}
+      # tweets_all << tweet["text"].split(' ').reject {|word| word.length > 10}
 
-      # .reject {|word| word.length != 3}
-
+      array = ["@", "http", "#"]
+      # tweets_all << tweet["text"].split(' ').delete_if{|x| array.include?(x.chars)}
+      tweets_all << tweet["text"].split(' ').reject {|word| word.length > 13}
+      
       # tweets = tweets_all.split(" ").delete
 
       # tweets[0]["text"]
